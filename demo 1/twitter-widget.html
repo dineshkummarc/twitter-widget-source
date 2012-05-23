@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<meta name="author" content="Janet Wagner" />
+
+<script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id&#61;akzPZxSf6sr30votc95ySQ&amp;v&#61;1"></script>
+
+<!-- CSS Stylesheets -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!-- jQuery / JavaScript -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="js/twitter-widget.js"></script>
+
+<meta name="description" content="This is a demo for a tutorial that creates a Twitter API Status Display Widget using JavaScript Linkify Function, Twitter Web Intents, Twitter @Anywhere Hover Card (Default View) and Tweet Box." />
+<meta name="keywords" content="twitter,api,widget" />
+<title>Multiple Tweets | Twitter API Status Display Widget | Demo 1</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    twttr.anywhere(function (T) {
+       T.bind("authComplete", function (e, user) {
+          // triggered when auth completed successfully
+        });
+
+	   T.bind("signOut", function (e) {
+          // triggered when user logs out
+        });
+     });
+</script>
+
+<script type="text/javascript">
+    twttr.anywhere(function (T) {
+	   T("#tweet").hovercards({ expanded: true });
+     });
+</script>
+
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+<h1>Twitter API Status Display Widget - Demo 1</h1>
+
+<p>
+Multiple Tweets. Includes JavaScript Linkify Function, Twitter Web Intents, Twitter @Anywhere Hover Card (Expanded View), Follow Me and Login/Signout Button Functionality.
+</p>
+
+
+<!-- Begin Content -->
+<div id="content">
+
+<!-- Begin Twitter Feed Area  -->
+<div class="twitterfeed">
+
+<img src="images/twitter_bird.png" width="99" height="75" alt="Follow Nettuts+ and Tuts+ on Twitter" />
+
+<h3>Follow <a href="http://twitter.com/envatowebdev" target="_blank">Nettuts+</a> and <a href="http://twitter.com/tutsplus" target="_blank">Tuts+</a> on Twitter</h3>
+
+<div id="tweet"></div>
+
+<span id="follow-envatowebdev"></span>
+<script type="text/javascript">
+   twttr.anywhere(function (T) {
+       T('#follow-envatowebdev').followButton("envatowebdev");
+     });
+</script>
+
+<div class="log-button">
+<span id="login-logout"></span>
+<script type="text/javascript" src="js/twitter-login.js"></script>
+</div>
+
+</div>
+<!-- End Twitter Feed Area  -->
+
+<ul>
+<li><a href="http://www.webcodepro.net/twitter-demo/twitter-widget.html">View Demo 1</a> (Multiple Tweets, @Anywhere Functionality, Follow Button)</li>
+<li><a href="http://www.webcodepro.net/twitter-demo-2/twitter-widget.html">View Demo 2</a> (Multiple Tweets, @Anywhere Functionality, Tweet Box)</li>
+<li><a href="http://www.webcodepro.net/twitter-demo-3/twitter-widget.html">View Demo 3</a> (Standard Widget, Multiple Tweets, Does not include @Anywhere Functionality)</li>
+<li><a href="http://www.webcodepro.net/twitter-demo-4/twitter-widget.html">View Demo 4</a> (Standard Widget, Single Tweet, Does not include @Anywhere Functionality)</li>
+<li><a href="http://www.webcodepro.net/twitter-demo-5/twitter-widget.html">View Demo 5</a> (Standard Widget, Multiple Tweets, Does not include @Anywhere Functionality. Twitter Profile Images retrieved using Twitter API)</li>
+<li><a href="http://www.webcodepro.net/twitter-demo-6/twitter-widget.html">View Demo 6</a> (Multiple Tweets, @Anywhere Functionality, Follow Button, Twitter Profile Images are self hosted)</li>
+</ul>
+
+</div>
+<!-- End Content -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
